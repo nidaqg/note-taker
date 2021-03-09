@@ -14,7 +14,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ## Description
 
 This application allows the user to input notes with a title and save them. Saved notes appear in the left hand sidebar and if clicked on will be displayed in the main note section. Unwanted notes can also be deleted with the provided delete button. 
-This app made use of Node.js, Express.js and javascript to create the front and backend of the application. It has been deployed using Heroku.
+This app made use of Node.js, Express.js and javascript to create the front and backend of the application. It has been deployed using [Heroku](https://note-taker-basic.herokuapp.com/) .
 
 ## Table of Contents
 
@@ -64,5 +64,7 @@ SOFTWARE.
 ## Questions
 
 The repo for this project can be found here: https://github.com/nidaqg/note-taker
+
+Heroku link : https://note-taker-basic.herokuapp.com/
 
 For any questions or to report issues, email me at: nidaqg@gmail.com
