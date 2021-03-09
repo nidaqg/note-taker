@@ -38,9 +38,14 @@ app.post("/api/notes", (req, res) => {
           return console.log(error)
       }
       notes = JSON.parse(notes)
+      //assign unique id to each new note depending on last id.
+      //if no items in notes array, assign id as 10
+      if (notes.length > 0) {
       let lastId = notes[notes.length - 1].id
-      let id =  parseInt(lastId)+ 1
- 
+      var id =  parseInt(lastId)+ 1
+      } else {
+        var id = 10;
+      }
       //create new note object
       let newNote = { 
         title: currentNote.title, 
