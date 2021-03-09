@@ -36,7 +36,7 @@ On opening the app, the user will be presented with a landing page with a button
 
 ![note taking demo](images/demo2.png)
 
-![note taking demo](images/demo2.png)
+![note taking demo](images/demo3.png)
 
 
 ## Contributing
