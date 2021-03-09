@@ -17,13 +17,12 @@ app.get("/notes", (req, res) => {
    res.sendFile(path.join(__dirname, "./public/notes.html"))
 });
 
-//send json of all notes if user accesses api/notes
+//send json of all notes if user accesses /api/notes
 app.get("/api/notes", (req, res) => {
   fs.readFile(path.join(__dirname, "./db/db.json"), "utf8", (error,notes) => {
       if (error) {
           return console.log(error)
       }
-      console.log(notes)
       res.json(JSON.parse(notes))
   })
 });
@@ -48,9 +47,9 @@ app.post("/api/notes", (req, res) => {
         text: currentNote.text, 
         id: id 
         }
-
+      //merge new note with existing notes array
       var newNotesArr = notes.concat(newNote)
-
+      //write new array to db.json file and retuern it to user
       fs.writeFile(path.join(__dirname, "./db/db.json"), JSON.stringify(newNotesArr), (error, data) => {
         if (error) {
           return error
@@ -62,4 +61,32 @@ app.post("/api/notes", (req, res) => {
  
 });
 
+//delete chosen note using delete http method
+app.delete("/api/notes/:id", (req, res) => {
+  let deleteId = JSON.parse(req.params.id);
+  console.log("ID to be deleted: " ,deleteId);
+  fs.readFile(path.join(__dirname, "./db/db.json"), "utf8", (error,notes) => {
+    if (error) {
+        return console.log(error)
+    }
+   let notesArray = JSON.parse(notes);
+   //loop through notes array and remove note with id matching deleteId
+   for (var i=0; i<notesArray.length; i++){
+     if(deleteId == notesArray[i].id) {
+       notesArray.splice(i,1);
+
+       fs.writeFile(path.join(__dirname, "./db/db.json"), JSON.stringify(notesArray), (error, data) => {
+        if (error) {
+          return error
+        }
+        console.log(notesArray)
+        res.json(notesArray);
+      })
+     }
+  }
+  
+}); 
+});
+
+//initialize port to start listening
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
