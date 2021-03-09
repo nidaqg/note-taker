@@ -32,6 +32,12 @@ This app made use of Node.js, Express.js and javascript to create the front and 
 ## Usage 
 
 On opening the app, the user will be presented with a landing page with a button to 'get started'. On clicking the button, the user will be taken to the notes app where user can enter a note with a title and save it. Saved notes will be displayed in the left-hand sidebar and on clicking a note in the sidebar, it will be displayed in the main notes section. Clicking the pencil icon in the tp right hand corner will clear all input fields so new notes can be entered. If a note in no longer needed, it can be deleted using the delete icon next to each note in the sidebar.
+![landing page demo](images/demo1.png)
+
+![note taking demo](images/demo2.png)
+
+![note taking demo](images/demo2.png)
+
 
 ## Contributing
  ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)
