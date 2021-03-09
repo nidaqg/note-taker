@@ -13,7 +13,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## Description
 
-This application allows the user to input notes with a title and save them. Saved notes appear in the left hand sidebar and if clicked on will be displayed in the main note section. Unwanted notes can also be deleted with the provided delete button. 
+This application allows the user to input notes as well as a title for each note and save them. Saved notes appear in the left hand sidebar and if clicked on will be displayed in the main note section. Unwanted notes can also be deleted with the provided delete button. 
 This app made use of Node.js, Express.js and javascript to create the front and backend of the application. It has been deployed using [Heroku](https://note-taker-basic.herokuapp.com/) .
 
 ## Table of Contents
@@ -26,7 +26,7 @@ This app made use of Node.js, Express.js and javascript to create the front and 
 
 ## Installation
  
- To run the app from yuor local machinre, you must download all files and initial;ize the PORT from within the app folder using 'node server.js' in the command line. Once PORT has been initialized, app can be opened in browser by navigating to 'localhost:8080'. 
+ To run the app from your local machine, you must download all files and initial;ize the PORT from within the app folder using 'npm start' in the command line. Once PORT has been initialized, app can be opened in browser by navigating to 'localhost:3001'. 
  For an easier method of accessing the app, use the heroku link.
 
 ## Usage 
